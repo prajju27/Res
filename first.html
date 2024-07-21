@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgrowwConnect</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header, footer {
+            background-color: #5dddf7;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1, header p {
+            margin: 0;
+        }
+        header p {
+            font-size: 1em;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #355760;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 20px;
+            margin: 0 10px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #02ff78;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #857bf5;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #26ed69;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            background-image: url("nursery.jpeg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 80vh;
+        }
+        .register-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .register-options .option {
+            text-align: center;
+            margin: 20px;
+        }
+        .register-options .option img {
+            width: 150px;
+            height: auto;
+        }
+        .register-options .option a {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            color: white;
+            background-color: #090909;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .register-options .option a:hover {
+            background-color: #06bcf3;
+        }
+        footer {
+            background-color: #2fbad5;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+            font-size: 1em;
+            position: relative;
+        }
+        footer a:hover {
+            color: #0e5b72;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 0.9em;
+            }
+            footer a {
+                font-size: 0.9em;
+            }
+        }
+        @media (max-width: 480px) {
+            header p {
+                font-size: 0.8em;
+            }
+            nav a {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AgrowwConnect</h1>
+        <p>Connect farmers and customers directly to buy and sell plants</p>
+        <nav>
+            <a href="adminlogin.html">Admin Login</a>
+            <a href="view.php">Available Nurseries</a>
+            <div class="dropdown">
+                <a href="#">Sign up?</a>
+                <div class="dropdown-content">
+                    <a href="AfterRegister.html">Farmer</a>
+                    <a href="aftercus.html">Customer</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="register-options">
+            <div class="option">
+                <img src="im2.jpeg" alt="Farmer">
+                <a href="farmer.html">Farmer Registration</a>
+            </div>
+            <div class="option">
+                <img src="cus.png" alt="Customer">
+                <a href="customer.html">Customer Registration</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="tooltip">
+            <a href="#">🌐 About Us</a>
+            <span class="tooltiptext">
+                Designed By Malnad College of Engineering Students
+                <span style="color: aqua; text-align: center;">"Our Goal To Achieve"</span>
+                <p>The agricultural sector faces a gap between farmers and customers. Causes include limited communication channels, lack of pricing transparency, and inefficient distribution networks.</p>
+            </span>
+        </div>
+        <div class="tooltip">
+            <a href="#">📞 Contact Us</a>
+            <span class="tooltiptext">
+                Sagar C R-9611605856
+                <br>
+                Prajwal Kumara M-6360849566
+                <br>
+                Tapasvi M I-8867301570
+                <br>              
+                Sudharshan K P-9901350736
+            </span>
+        </div>
+        <div class="tooltip">
+            <a href="#">💬 Support Us</a>
+            <span class="tooltiptext">Need help? Visit our support page</span>
+        </div>
+    </footer>
+</body>
+</html>
